@@ -1,0 +1,9 @@
+SELECT mustahik.nik, mustahik.nama, kecamatan.nama FROM mustahik INNER JOIN kecamatan ON mustahik.idkecamatan=kecamatan.id;
+
+SELECT idkecamatan, COUNT(*) FROM mustahik GROUP BY idkecamatan;
+
+SELECT mustahik.nik, mustahik.nama, kecamatan.nama, COUNT(*) FROM mustahik INNER JOIN kecamatan ON mustahik.idkecamatan=kecamatan.id GROUP BY kecamatan.nama;
+
+SELECT jeniskelamin, sum(nik) as jml from mustahik group by jeniskelamin;
+
+SELECT jenisprogram.nama AS Jenis_Program, COUNT(*) AS Jumlah FROM penyaluran INNER JOIN jenisprogram ON penyaluran.idjenisprogram=jenisprogram.id GROUP BY jenisprogram.nama;
